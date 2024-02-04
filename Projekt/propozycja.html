@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propozycja</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icon.png">
+</head>
+
+<body>
+  <header>
+    <div class="intro">
+      <h1>Przepisy Kulinarnie</h1>
+
+    </div>
+    <h3>Witaj w świecie smakowitych doznań! Odkryj razem z nami tajniki kulinariów i przygotuj wyjątkowe dania w Twojej
+      kuchni.</h3>
+  </header>
+  <nav>
+    <div class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="main.html" class="dropbtn">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="main.html#maind">Dania główne</a></li>
+            <li><a href="main.html#sniad">Śniadania</a></li>
+            <li><a href="main.html#deser">Desery</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">
+            <h1>Co polecamy?</h1>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="przepisy.html">Przepisy</a></li>
+            <li><a href="main.html#yours">Wasze dania</a></li>
+            <!-- <li><a href="main.html#photos">Desery</a></li> -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="propozycja.html" class="dropbtn">
+            <h1>Zaproponuj swój przepis</h1>
+          </a>
+        </li>
+      </ul>
+      <div class="logo_navbar">
+        <img src="icon.png" alt="logo">
+      </div>
+    </div>
+  </nav>
+
+  <div class="formularz">
+    <h2>Zaproponuj nam swój przepis:</h2>
+
+    <form>
+      <label for="fname">Imię:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+
+      <label for="lname">Nazwisko:</label><br>
+      <input type="text" id="lname" name="lname"><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+
+      <label for="">Wpisz składniki oraz sposób przygotowania: </label>
+      <textarea id="message" name="message" rows="4" cols="70"></textarea>
+
+      <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+      <label for="subscribe">Zapisz się do newslettera</label><br>
+
+
+      <button id="submit" onclick="submitOrder()">Zamów</button>
+    </form>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideRecipe()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalText"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <a href="https://www.facebook.com"><img src="facebook.jpg" alt="facebook"></a>
+      <a href="https://www.instagram.com"><img src="instagram.jpg" alt="instagram"></a>
+      <a href="https://www.tiktok.com"><img src="tiktok.jpg" alt="tiktok"></a>
+    </div>
+    &copy; 2024 Przepisy Kulinarnie
+  </footer>
+
+  <script src="propozycja.js"></script>
+</body>
+
+</html>

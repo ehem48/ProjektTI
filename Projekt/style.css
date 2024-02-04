@@ -1,0 +1,1435 @@
+/* 
+  Ciało strony
+
+  Ten fragment kodu definiuje style dla całego ciała strony. Tekst na stronie ma czcionkę Arial, 
+  a kolor jest ustawiony na biały. Marginesy i wewnętrzne odstępy są usuwane, co oznacza, że zawartość będzie przylegać bezpośrednio 
+  do krawędzi okna przeglądarki. Tło strony jest w kolorze różowym odcieniu. Tekst na stronie jest wyśrodkowany. 
+
+  Markup:
+  <header>
+    <div class="intro">
+      <h1>Przepisy Kulinarnie</h1>
+    </div>
+  </header>
+
+  Styleguide: 1.0
+*/
+
+/* 
+  Intro
+
+  Ten fragment kodu definiuje style dla sekcji o klasie "intro". Tło sekcji jest w kolorze pomarańczowym. 
+  Tekst w tej sekcji jest wyśrodkowany. Narożniki sekcji są zaokrąglone, co nadaje jej bardziej zaokrąglony wygląd.
+   Sekcja ma również dodany margines i wewnętrzne odstępy dla lepszego układu treści.
+
+  Markup:
+  <div class="intro">
+      <h1>Przepisy Kulinarnie</h1>
+    </div>
+
+    Styleguide: 2.0
+*/
+/* 
+  Nawigacja
+
+  Ten fragment kodu definiuje style dla paska nawigacyjnego (navbar) oraz jego elementów. Pasek nawigacyjny ma tło w kolorze #ff8f1e 
+  i zaokrąglone narożniki. Elementy są ustawione jako flexbox, co umożliwia elastyczne ułożenie elementów i wyśrodkowanie ich zarówno 
+  w pionie jak i w poziomie. Odstępy są dodane zarówno wewnątrz paska nawigacyjnego jak i między jego elementami. Elementy listy są usunięte, 
+  a linki nawigacyjne mają białe tło, wewnętrzne odstępy, oraz zaokrąglone narożniki. Podczas najechania na rozwijane menu zmienia się kolor tła.
+
+  Markup: 
+  <nav>
+    <div class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="main.html" class="dropbtn">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="#maind">Dania główne</a></li>
+            <li><a href="#sniad">Śniadania</a></li>
+            <li><a href="#deser">Desery</a></li>
+          </ul>
+        </li>
+        </div>
+  </nav>
+
+  Styleguide: 3.0
+  
+*/
+
+/* 
+  Menu rozwijane
+
+   Zawartość rozwijanego menu jest ukryta na początku (display: none) i pojawia się tylko podczas najechania na nie. 
+   Logo w pasku nawigacyjnym ma ustaloną szerokość i wysokość. Cała nawigacja jest wyśrodkowana, a kolor tekstu zmienia 
+   się podczas najechania na link nawigacyjny.
+
+  Markup: 
+  <nav>
+    <div class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="main.html" class="dropbtn">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="#maind">Dania główne</a></li>
+            <li><a href="#sniad">Śniadania</a></li>
+            <li><a href="#deser">Desery</a></li>
+          </ul>
+        </li>
+        </div>
+  </nav>
+
+  Styleguide: 3.1
+*/
+/* 
+  "Wasze dania"
+
+  Ten fragment kodu definiuje style dla sekcji o identyfikatorze "dania". Sekcja ta jest ustawiona jako flexbox, co pozwala na 
+  elastyczne rozmieszczenie elementów w obrębie niej. Elementy w sekcji będą zawijane do nowej linii, a ich rozmieszczenie będzie równomierne, 
+  rozciągając się na przestrzeni dostępnej dla sekcji. Sekcja ma ustaloną maksymalną szerokość i posiada margines na górze i dole, 
+  automatycznie dostosowujący się po bokach. Tło sekcji jest w kolorze kremowym, a jej narożniki są zaokrąglone.
+
+  Markup: 
+  <section id="dania">
+    <div class="slider">
+      <div class="slides">
+        <div id="slide-1">
+          <a href="przepisy.html" target="_blank"><img src="1.jpg" alt="danie1"></a>
+          <label>
+            <h2>Tosty francuskie</h2>
+            <h3><br>Dodane przez: Jacek24</h3>
+          </label>
+        </div>
+        </div>
+      <a href="#slide-1"><label class="kropka"></label></a>
+      </div>
+  </section>
+
+  Styleguide: 4.0
+*/
+/* 
+  Slider
+
+  Slider wyświetla dynamicznie zmieniające się treści, takie jak obrazy. 
+  Klasa .slider definiuje style dla slidera, takie jak szerokość, wyśrodkowanie tekstu, ukrycie elementów, które nie mieszczą się w obszarze slidera.
+  Ustawia przejście wysokości 0.3s z łagodnym efektem.
+
+  Markup: 
+      <a href="#slide-1"><label class="kropka"></label></a>
+      <a href="#slide-2"><label class="kropka"></label></a>
+      <a href="#slide-3"><label class="kropka"></label></a>
+      <a href="#slide-4"><label class="kropka"></label></a>
+      <a href="#slide-5"><label class="kropka"></label></a>
+
+  Styleguide: 4.1
+*/
+/* 
+  "Dania główne"
+
+  Klasa .recipe definiuje style dla pojedynczego przepisu, w tym wyświetlanie tekstu na środku, zaokrąglenie narożników, 
+  efekt transformacji powiększenia przepisu przy najechaniu myszką i marginesy. Dzięki flex: calc(33.33%); na stronie widnieją trzy przepisy, 
+  uzytkownik po przesunięciu przepisów lub użyciu slidera zobaczy kolejne dania.
+  Dzięki właświwościom klasy .container (position: relative;) i .box (position: absolute;) w zdjęciach przepisów wkomponowane są kolejne zdjęcia oraz tekst
+  
+
+  Markup: 
+      <section id="przepis" class="przepis">
+    <div class="slider">
+      <div class="slides">
+        <div class="recipe" id="pierogi1">
+          <h2>Pierogi ruskie</h2>
+          <div class="container">
+            <img src="pierogi1.jpg" alt="Pierogi Ruskie">
+            <div class="box"><img src="zegar.png">&nbsp;Czas&nbsp;&nbsp;<br>&nbsp;&nbsp;25min&nbsp;&nbsp;<img
+                src="pngegg_jasny.png">Ilość porcji:<br>3</div>
+          </div>
+          <div class="ingredients">
+            <h3>Składniki:</h3>
+            <ul>
+              <li>500g ziemniaków</li>
+              <li>200g sera białego</li>
+              <li>1 cebula</li>
+              <li>Sól, pieprz do smaku</li>
+            </ul>
+          </div>
+          <label>
+            <h3>Przepis:</h3><br>W misce wymieszaj mąkę z jajkiem, dodaj wodę i sól. Zagnieć ciasto. Rozwałkuj ciasto
+            na... <a href="przepisy.html" target="_blank">kliknij aby zobaczyc pełny opis.</a>
+          </label>
+        </div>
+        </div>
+  </section>
+
+  Styleguide: 5.0
+*/
+
+/* 
+  "Śniadania"
+
+  Ten kod definiuje style dla sekcji zawierającej pojedyncze przepisy kulinarne. Sekcja ta ma maksymalną szerokość ustawioną na 800 pikseli 
+  i jest wyśrodkowana na stronie za pomocą wartości "auto" dla marginesu poziomego. Posiada wewnętrzne odstępy, tło w kolorze różowym, 
+  zaokrąglone narożniki oraz efekt cienia.
+
+  Każdy przepis w sekcji jest układany za pomocą siatki (grid), która składa się z trzech kolumn o jednakowej szerokości (1fr) 
+  i odstępu między elementami wynoszącego 20 pikseli.
+
+  Dodatkowo, definiowane są style dla elementów o klasie "recipe1", które zawierają pojedyncze przepisy. 
+  Tekst w przepisach jest koloru ciemnoszarego, a elementy posiadają obramowanie, zaokrąglone narożniki, 
+  tło w kolorze białym oraz efekt cienia. Tekst jest wyśrodkowany, a podczas najechania myszką na przepis, ten zostaje nieznacznie powiększony.
+  Nagłówek przepisu jest również wyśrodkowany, a obrazy mają ustalone wymiary oraz zaokrąglone narożniki. 
+  Dodatkowo, definiowane są style dla składników przepisu.
+
+  Markup: 
+      <section id="przepis1" class="przepis1">
+    <div class="recipe1" id="pierogi1">
+        <h2>Pierogi ruskie</h2>
+            <img src="sniadanie1.jpg" alt="Pierogi Ruskie">
+        <div class="ingredients">
+            <h3>Składniki:</h3>
+            <ul>
+                <li>500g ziemniaków</li>
+                <li>200g sera białego</li>
+                <li>1 cebula</li>
+                <li>Sól, pieprz do smaku</li>
+            </ul>
+        </div>
+        <label><a href="przepisy.html">Przepis</a></label>
+    </div>
+  </section>
+
+  Styleguide: 6.0
+*/
+
+/* 
+  "Desery"
+
+  Ten kod definiuje style dla sekcji zawierającej galerię zdjęć.
+  Klasa "gallery" definiuje wygląd dla kontenera galerii. Ma ona marginesy po lewej i prawej stronie ustawione na 50 pikseli, 
+  dzięki czemu galeria jest wycentrowana na stronie. Galeria jest podzielona na cztery kolumny (zdefiniowane przez właściwość "columns") 
+  i ma wewnętrzny odstęp, margines dolny oraz margines górny ustawione automatycznie.
+
+  Obrazy w galerii, określone przez selektor "gallery img", mają szerokość ustawioną na 90% szerokości swojego kontenera, 
+  co pozwala na responsywne dopasowanie do różnych rozmiarów ekranu. Mają one zaokrąglone narożniki, 
+  marginesy oraz dodatkowo podczas najechania myszką, zostają nieznacznie powiększone.
+
+  Markup: 
+      <section id="photos">
+    <div class="gallery">
+      <a href="przepisy.html" target="_blank">
+        <img src="deser1.jpg" alt="deser">
+        <img src="deser2.jpg" alt="deser">
+        <div class="container">
+          <img src="deser3.jpg" alt="Pierogi Ruskie">
+        </div>
+        <img src="deser4.jpg" alt="deser">
+        <img src="deser5.jpg" alt="deser">
+        <img src="deser6.jpg" alt="deser">
+        <img src="deser7.jpg" alt="deser">
+        <img src="deser8.jpg" alt="deser">
+        <img src="deser9.jpeg" alt="deser">
+        <img src="nalesniki.jpg" alt="deser">
+        <img src="deser10.jpg" alt="deser">
+        <img src="deser11.jpg" alt="deser">
+        <img src="deser12.jpg" alt="deser">
+      </a>
+    </div>
+  </section>
+
+  Styleguide: 7.0
+*/
+
+/* 
+  "Stopka"
+
+  Ten blok kodu definiuje style CSS dla stopki strony oraz obrazków zawartych w stopce. 
+  Oto funkcje niektórych właściwości:position: Określa, że stopka ma stałą pozycję (fixed), co oznacza, że pozostaje na ekranie, 
+  nawet gdy użytkownik przewija stronę, z-index: Nadaje stopce poziom z-indeksu równy 2, co może być przydatne do kontrolowania, 
+  który element znajduje się na wierzchu.
+
+  Markup: 
+    <dic class"stopka">  
+    <div class="footer">
+      <a href="https://www.facebook.com"><img src="facebook.jpg" alt="facebook"></a>
+      <a href="https://www.instagram.com"><img src="instagram.jpg" alt="instagram"></a>
+      <a href="https://www.tiktok.com"><img src="tiktok.jpg" alt="tiktok"></a>
+    </div>
+    &copy; 2024 Przepisy Kulinarnie
+  </div>
+
+  Styleguide: 8.0
+*/
+
+/* 
+  Podstrona "Propozycja"
+
+  Styleguide: 9.0
+*/
+
+/* 
+  Ciało podstrony
+
+  Ten fragment kodu definiuje style dla całego ciała strony. Tekst na stronie ma czcionkę Arial lub bezszeryfową jako alternatywę, 
+  a kolor jest ustawiony na biały. Marginesy i wewnętrzne odstępy są usuwane, co oznacza, że zawartość będzie przylegać bezpośrednio 
+  do krawędzi okna przeglądarki. Tło strony jest w kolorze różowym odcieniu. Tekst na stronie jest wyśrodkowany.
+
+  Markup:
+  <header>
+    <div class="intro">
+      <h1>Przepisy Kulinarnie</h1>
+    </div>
+  </header>
+
+  Styleguide: 9.1
+*/
+
+/* 
+  Nawigacja podstrony
+
+  Ten fragment kodu definiuje style dla paska nawigacyjnego (navbar) oraz jego elementów. Pasek nawigacyjny ma tło w kolorze #ff8f1e 
+  i zaokrąglone narożniki. Elementy są ustawione jako flexbox, co umożliwia elastyczne ułożenie elementów i wyśrodkowanie ich zarówno 
+  w pionie jak i w poziomie. Odstępy są dodane zarówno wewnątrz paska nawigacyjnego jak i między jego elementami. Elementy listy są usunięte, 
+  a linki nawigacyjne mają białe tło, wewnętrzne odstępy, oraz zaokrąglone narożniki. Podczas najechania na rozwijane menu zmienia się kolor tła.
+
+  Markup: 
+  <nav>
+    <div class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="main.html" class="dropbtn">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="main.html#maind">Dania główne</a></li>
+            <li><a href="main.html#sniad">Śniadania</a></li>
+            <li><a href="main.html#deser">Desery</a></li>
+          </ul>
+        </li>
+        </div>
+  </nav>
+  
+  Styleguide: 9.2
+*/
+
+/* 
+  Menu rozwijane
+
+   Zawartość rozwijanego menu jest ukryta na początku (display: none) i pojawia się tylko podczas najechania na nie. 
+   Logo w pasku nawigacyjnym ma ustaloną szerokość i wysokość. Cała nawigacja jest wyśrodkowana, a kolor tekstu zmienia 
+   się podczas najechania na link nawigacyjny.
+
+  Markup: 
+  <nav>
+    <div class="navbar">
+      <ul>
+        <li class="dropdown">
+          <a href="main.html" class="dropbtn">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="main.html#maind">Dania główne</a></li>
+            <li><a href="main.html#sniad">Śniadania</a></li>
+            <li><a href="main.html#deser">Desery</a></li>
+          </ul>
+        </li>
+        </div>
+  </nav>
+
+  Styleguide: 9.2.1
+*/
+
+/* 
+  Formularz podstrony
+
+  Ten blok kodu definiuje style dla formularza oraz jego elementów. Formularz ma tło w kolorze #fecb7f, zaokrąglone narożniki 
+  i jest wyśrodkowany na stronie. Etykiety są pogrubione, a pola formularza mają jednolitą szerokość i zaokrąglone narożniki. 
+  Przyciski mają zielone tło, białą czcionkę i podlegają zmianie koloru podczas najechania myszką. Dodatkowy padding został 
+  zastosowany dla elementu o identyfikatorze "button".
+
+  Markup: 
+  <div class="formularz">
+    <h2>Zaproponuj nam swój przepis:</h2>
+    <form>
+      <label for="fname">Imię:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+      <label for="lname">Nazwisko:</label><br>
+      <input type="text" id="lname" name="lname"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="">Wpisz składniki oraz sposób przygotowania: </label>
+      <textarea id="message" name="message" rows="4" cols="70"></textarea>
+      <input type="checkbox" id="subscribe" name="subscribe" value="newsletter">
+      <label for="subscribe">Zapisz się do newslettera</label><br>
+      <button id="submit" onclick="submitOrder()">Zamów</button>
+    </form>
+  </div>
+  
+  Styleguide: 9.3
+*/
+
+/* 
+  Okno modalne formularza
+
+  Okno modalne jest ukryte na początku (display: none) i ma ustaloną pozycję jako fixed, co oznacza, 
+  że pozostanie w tym samym miejscu na stronie niezależnie od przewijania. Jest on ustalony na pełną szerokość 
+  i wysokość ekranu oraz jest wyśrodkowany zarówno w pionie (justify-content: center) jak i w poziomie (align-items: center). 
+  Zawartość okna ma tło w kolorze #915151, zaokrąglone narożniki oraz odstępy wewnętrzne. Przycisk zamykający modal jest
+  ustawiony na pozycji absolutnej, znajduje się w prawym górnym rogu modalu i zmienia kursor na wskaźnik przy najechaniu.
+
+  Markup: 
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideRecipe()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalText"></div>
+    </div>
+  </div>
+  
+  Styleguide: 9.3.1
+*/
+/* 
+  Stopka podstrony
+
+  Ten blok kodu definiuje style CSS dla stopki strony oraz obrazków zawartych w stopce. 
+  Oto funkcje niektórych właściwości:position: Określa, że stopka ma stałą pozycję (fixed), co oznacza, że pozostaje na ekranie, 
+  nawet gdy użytkownik przewija stronę, z-index: Nadaje stopce poziom z-indeksu równy 2, co może być przydatne do kontrolowania, 
+  który element znajduje się na wierzchu.
+
+  Markup: 
+    <dic class"stopka">  
+    <div class="footer">
+      <a href="https://www.facebook.com"><img src="facebook.jpg" alt="facebook"></a>
+      <a href="https://www.instagram.com"><img src="instagram.jpg" alt="instagram"></a>
+      <a href="https://www.tiktok.com"><img src="tiktok.jpg" alt="tiktok"></a>
+    </div>
+    &copy; 2024 Przepisy Kulinarnie
+  </div>
+  
+  Styleguide: 9.4
+*/
+/* 
+  Podstrona "Przepisy"
+
+  Styleguide: 10.0
+*/
+/* 
+  Ciało podstrony
+
+  Klasa ".body" definiuje ogólne style dla treści strony. Ustawia czcionkę na Arial lub domyślną sans-serif, kolor tekstu na szary (#666), 
+  usuwa marginesy i wewnętrzne odstępy oraz ustawia tło na odcień różu (#f1c4c4). Tekst jest wyśrodkowany za pomocą "text-align: center".
+
+  Reguła ".body h1" określa styl dla nagłówka pierwszego poziomu (h1) wewnątrz sekcji ".body". Kolor tekstu jest ustawiony na szary (#666), 
+  a odstęp pod nagłówkiem wynosi 10 pikseli.
+
+  Reguła ".body h2" definiuje styl dla nagłówka drugiego poziomu (h2) wewnątrz sekcji ".body". Tekst jest wyrównany do lewej strony.
+
+  Markup: 
+      <header class="header">
+    <div class="intro">
+      <h1>Przepisy Kulinarnie</h1>
+    </div>
+  </header>
+
+  Styleguide: 10.1
+*/
+
+/* 
+  Menu nawigacyjne
+
+  Klasa ".navbar1" definiuje ogólne style dla paska nawigacyjnego. Ustawia tło na odcień pomarańczowego (#f8a451), 
+  zaokrągla narożniki na 10 pikseli, używa flexboxa do ułożenia elementów, umożliwia zawijanie elementów na nowe linie, 
+  wyśrodkowuje elementy nawigacyjne, usuwa domyślny styl punktów listy, dodaje wewnętrzne odstępy i marginesy oraz ustawia kolor tekstu na biały.
+
+  Reguła ".navbar1>ul" definiuje style dla listy ul wewnątrz klasy ".navbar1". 
+  Używa flexboxa do ułożenia elementów, usuwa domyślny padding, margines i styl punktów listy.
+
+  Klasa ".navbar1 a" definiuje style dla linków nawigacyjnych. Ustawia je jako bloki, dodaje wewnętrzne odstępy, 
+  usuwa podkreślenie, zaokrągla narożniki i ustawia kolor tekstu na biały.
+
+  Markup: 
+   <nav class="nav">
+    <div class="navbar1">
+      <ul>
+        <li class="dropdown1">
+          <a href="main.html" class="dropbtn1">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content1">
+            <li><a href="main.html#maind">Dania główne</a></li>
+            <li><a href="main.html#sniad">Śniadania</a></li>
+            <li><a href="main.html#deser">Desery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  Styleguide: 10.2
+*/
+/* 
+  Podmenu
+
+  Klasa ".dropdown-content1" definiuje style dla zawartości rozwijanego menu. Ukrywa ją początkowo, 
+  ustawia pozycję absolutną, tło na białe i usuwa domyślny styl punktów listy.
+
+  Reguła ".dropdown1:hover .dropdown-content1" wyświetla zawartość rozwijanego menu podczas najechania na nie.
+
+  Klasa ".nav" definiuje style dla nawigacji. Używa flexboxa do wyśrodkowania elementów.
+
+  Markup: 
+  <nav class="nav">
+    <div class="navbar1">
+      <ul>
+        <li class="dropdown1">
+          <a href="main.html" class="dropbtn1">
+            <h1>Strona główna</h1>
+          </a>
+          <ul class="dropdown-content1">
+            <li><a href="main.html#maind">Dania główne</a></li>
+            <li><a href="main.html#sniad">Śniadania</a></li>
+            <li><a href="main.html#deser">Desery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  Styleguide: 10.2.1
+*/
+/* 
+  Sekcja przepisu
+
+  Identyfikator "#przepis1" definiuje ogólne style dla sekcji przepisu. Ustawia maksymalną szerokość sekcji na 800 pikseli, 
+  wyśrodkowuje sekcję na stronie, dodaje wewnętrzne odstępy, tło na białe, zaokrągla narożniki na 10 pikseli, dodaje delikatny cień, 
+  ustawia tekst na środku i dodaje margines dolny o wysokości 100 pikseli.
+
+  Reguła "#przepis1 ul li" definiuje style dla listy składników w sekcji przepisu. Dodaje wewnętrzne odstępy, ustawia tekst do lewej
+  i dodaje dolną obramowanie dla każdego elementu listy.
+
+  Klasa ".recipe22" dodaje style dla sekcji przepisu. Ustawia tekst do lewej i dodaje margines dolny o wysokości 100 pikseli.
+
+  Markup: 
+  <section id="przepis1">
+    <div>
+      <img src="nalesniki.jpg">
+    </div>
+    <div>
+      <h1>Składniki:</h1>
+      <h2>Ciasto:</h2>
+      <ul>
+        <li>1 szklanka mąki przennej</li>
+        <li>2 jajka</li>
+        <li>1,5 szklanki mleka</li>
+        <li>szczypta soli</li>
+        <li>łyżka cukru</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Masa Rafaello:</h2>
+      <ul>
+        <li>250 ml śmietanki kremówki 30 %</li>
+        <li>2 - 3 łyżki cukru pudru</li>
+        <li>250 g mascarpone</li>
+        <li>2 łyżki wiórek kokosowych</li>
+      </ul>
+    </div>
+    <div class="recipe22">
+      <h2>Przygotowanie:</h2>
+    </div>
+  </section>
+
+  Styleguide: 10.3
+*/
+
+/* 
+  Stopka
+
+  Klasa ".footer" definiuje ogólne style dla stopki. Dodaje wewnętrzne odstępy, ustawia jasne tło stopki na kolor #f8a451, 
+  szary kolor tekstu, ustala stopkę na stałej pozycji na dole ekranu, ustawia szerokość stopki na 100% szerokości ekranu, 
+  oraz dodaje górną obramowanie stopki o grubości 1 piksela w kolorze #eee.
+
+  Markup: 
+  <footer class="footer">
+    <div class="footer1">
+      <a href="https://www.facebook.com"><img src="facebook.jpg" alt="facebook"></a>
+      <a href="https://www.instagram.com"><img src="instagram.jpg" alt="instagram"></a>
+      <a href="https://www.tiktok.com"><img src="tiktok.jpg" alt="tiktok"></a>
+    </div>
+    &copy; 2024 Przepisy Kulinarnie
+  </footer>
+
+  Styleguide: 10.4
+*/
+
+/* 
+  Responsywność
+
+  Każda strona zawiera reguły stylów dla ekranów o szerokości do 600 pikseli, co odpowiada małym urządzeniom mobilnym. 
+  Zmienia on układ elementów, takich jak nagłówek, nawigacja i sekcje, na kolumnowy, aby lepiej dopasować się do wąskiego ekranu. 
+  Dodatkowo, zmniejsza rozmiar niektórych elementów i dostosowuje obrazy, aby lepiej wyglądały na małych urządzeniach.
+
+
+
+  Styleguide: 11.0
+*/
+/* Ustawienia ogólne dla strony */
+body {
+  font-family: 'Arial', sans-serif;
+  /* Wybór czcionki dla tekstu na stronie */
+  color: white;
+  /* Kolor tekstu na biały */
+  margin: 0;
+  /* Usunięcie marginesów */
+  padding: 0;
+  /* Usunięcie wewnętrznych odstępów */
+  background-color: #f1c4c4;
+  /* Ustalenie koloru tła strony na odcień różu */
+  text-align: center;
+  /* Wyśrodkowanie tekstu */
+}
+
+/* Styl dla nagłówka pierwszego poziomu (h1) */
+body h1 {
+  border-radius: 10px;
+  /* Zaokrąglenie narożników nagłówka */
+}
+
+/* Styl dla paragrafów */
+p {
+  font-size: 50px;
+  /* Ustalenie rozmiaru czcionki paragrafów na 50 pikseli */
+}
+
+/* Styl dla nagłówka */
+header {
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  /* Dodanie wewnętrznych odstępów */
+  background-color: #f8a451;
+}
+
+/* Styl dla sekcji "intro" */
+.intro {
+  background-color: #ff8f1e;
+  text-align: center;
+  border-radius: 15px;
+  /* Zaokrąglenie narożników */
+  margin: 5px;
+  /* Dodanie marginesu */
+  padding: 5px;
+  /* Dodanie wewnętrznych odstępów */
+}
+
+/* Nawigacja */
+.navbar {
+  background-color: #ff8f1e;
+  border-radius: 10px;
+  display: flex;
+  /* Ustawienie kontenera nawigacji jako flexbox */
+  flex-wrap: wrap;
+  /* Umożliwienie zawijania elementów nawigacyjnych do nowej linii */
+  justify-content: center;
+  /* Wyśrodkowanie elementów nawigacyjnych */
+  padding: 20px;
+  margin: 20px;
+  list-style: none;
+  /* Usunięcie domyślnego stylu punktów listy */
+}
+
+.navbar>ul {
+  display: flex;
+  /* Ustawienie elementów listy nawigacyjnej jako flexbox */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* Usunięcie domyślnego stylu punktów listy */
+}
+
+.navbar li {
+  margin: 5px;
+  /* Dodanie marginesu między elementami nawigacji */
+}
+
+.navbar a {
+  display: block;
+  /* Ustawienie linków nawigacyjnych jako bloki */
+  color: white;
+  padding: 14px 16px;
+  /* Dodanie wewnętrznych odstępów */
+  text-decoration: none;
+  /* Usunięcie podkreślenia linków */
+  border-radius: 10px;
+}
+
+.navbar .dropdown:hover {
+  background-color: rgb(255, 179, 72);
+  /* Zmiana koloru tła podczas najechania na rozwijane menu */
+}
+
+.dropdown {
+  border-radius: 5px;
+  /* Zaokrąglenie narożników dla rozwijanego menu */
+}
+
+.dropdown-content {
+  border-radius: 10px;
+  /* Zaokrąglenie narożników dla zawartości rozwijanego menu */
+  display: none;
+  /* Ukrycie zawartości rozwijanego menu */
+  position: absolute;
+  /* Ustawienie pozycji absolutnej */
+  background-color: white;
+}
+
+.dropdown-content a {
+  color: black;
+  border-radius: 10px;
+  /* Zaokrąglenie narożników dla linków w rozwijanym menu */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  /* Wyświetlenie zawartości rozwijanego menu podczas najechania na nie */
+}
+
+.logo_navbar img {
+  width: 100px;
+  /* Ustalenie szerokości loga */
+  height: 100px;
+  /* Ustalenie wysokości loga */
+}
+
+nav {
+  display: flex;
+  /* Ustawienie nawigacji jako flexbox */
+  justify-content: center;
+  /* Wyśrodkowanie nawigacji */
+}
+
+nav a:hover {
+  color: #ff8c00;
+  /* Zmiana koloru tekstu podczas najechania na link nawigacyjny */
+}
+
+#dania {
+  display: flex;
+  /* Ustawienie sekcji jako flexbox */
+  flex-wrap: wrap;
+  /* Umożliwienie zawijania elementów sekcji do nowej linii */
+  justify-content: space-around;
+  /* Rozłożenie elementów z równymi odstępami od siebie */
+  max-width: auto;
+  /* Maksymalna szerokość sekcji */
+  margin: 20px auto;
+  /* Ustawienie marginesu na górze i dołu, a automatyczne po bokach */
+  padding: 30px;
+  margin-bottom: 10px;
+  /* Dodanie marginesu dolnego */
+  background-color: #fecb7f;
+  border-radius: 8px;
+}
+
+
+/*Sekcja Przepisy */
+.recipe {
+  flex: calc(33.33%);
+  text-align: center;
+  padding: 10px;
+  /* Dodanie wewnętrznych odstępów dla przepisów */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+  /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+}
+
+.recipe:hover {
+  transform: scale(1.05);
+  /* Powiększenie przepisu podczas najechania myszką */
+}
+
+.recipe img,
+img {
+  width: 450px;
+  height: 400px;
+  border-radius: 8px;
+  /* Zaokrąglenie narożników obrazu przepisu */
+  transition: transform 0.3s ease-in-out;
+  /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+}
+
+.recipe:hover img {
+  transform: scale(1.1);
+  /* Powiększenie obrazu przepisu podczas najechania myszką */
+}
+
+
+.przepis1 {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e8b7e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trzy kolumny */
+  grid-gap: 20px; /* Odstęp między elementami */
+}
+
+/* Styl dla pojedynczego przepisu */
+.recipe1 {
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.recipe1:hover{
+  transform: scale(1.05);
+}
+/* Styl dla nagłówka przepisu */
+.recipe1 h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #333;
+}
+
+/* Styl dla obrazka przepisu */
+.recipe1 img {
+  width: 220px;
+  height: 170px;
+  border-radius: 5px;
+}
+
+/* Styl dla składników */
+.recipe1 .ingredients {
+  margin-top: 10px;
+}
+
+label a {
+  text-decoration: none;
+  color: rgb(240, 87, 87);
+}
+
+.name{
+  border-bottom: 1px solid black;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 20px;
+}
+
+#photos {
+  justify-content: center;
+}
+
+.gallery {
+  margin-left: 50px;
+  margin-right: 50px;
+  columns: 4;
+  padding: 20px;
+  margin-bottom: 100px;
+  margin-top: auto;
+}
+
+.gallery img {
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+
+.container {
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.box img {
+  width: 20px;
+  height: 20px;
+}
+
+.ingredients ul li {
+  list-style: none;
+  text-align: center;
+  margin-right: 50px;
+}
+
+/* Stopka */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8a451;
+  color: #fff;
+  position: fixed;
+  /* Ustawienie stopki na stałej pozycji */
+  bottom: 0;
+  /* Przyleganie do dolnej krawędzi ekranu */
+  width: 100%;
+  /* Szerokość stopki na 100% szerokości ekranu */
+  z-index: 2;/* nie przeswietla boxa*/
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+  /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+}
+
+footer img:hover {
+  transform: scale(1.2);
+  /* Powiększenie obrazu w stopce podczas najechania myszką */
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  /* Ustalenie szerokości slidera na 100% szerokości ekranu */
+  text-align: center;
+  overflow: hidden;
+  /* Ukrycie elementów, które nie mieszczą się w obszarze slidera */
+}
+
+.slides {
+  display: flex;
+  /* Ustawienie slajdów jako flexbox */
+  overflow-x: auto;
+  /* Umożliwienie płynnego przewijania po osi poziomej */
+  scroll-behavior: smooth;
+  /* Dodanie płynnego przewijania do slajdów */
+}
+
+.slides::-webkit-scrollbar {
+  width: 0px;
+  /* Ukrycie paska przewijania */
+  height: 0px;
+  /* Ukrycie paska przewijania */
+}
+
+.slides>div {
+  flex-shrink: 0;
+  /* Zablokowanie zwężania elementów slajdów */
+  width: 100%;
+  /* Ustalenie szerokości slajdu na 100% szerokości kontenera */
+  height: auto;
+  /* Automatyczne dostosowanie wysokości slajdu */
+  margin-right: 0.5rem;
+  /* Dodanie odstępu na prawo między slajdami */
+  border-radius: 10px;
+  /* Zaokrąglenie narożników slajdu */
+  background: #fecb7f;
+}
+
+.slides img:hover {
+  transform: scale(1.1);
+}
+
+.slider>a {
+  display: inline-flex;
+  /* Ustawienie nawigacji slajdów jako flexbox, dodatkowo pozwalając na ustawienie szerokości i wysokości */
+  width: 1.5rem;
+  /* Ustalenie szerokości nawigacyjnej kropki slajdu */
+  height: 1.5rem;
+  /* Ustalenie wysokości nawigacyjnej kropki slajdu */
+  background: white;
+  /* Ustalenie koloru tła nawigacyjnej kropki slajdu */
+  text-decoration: none;
+  /* Usunięcie podkreślenia linku */
+  border-radius: 50%;
+  /* Zaokrąglenie narożników nawigacyjnej kropki slajdu */
+}
+
+.slider>a:focus {
+  background: #000;
+  /* Zmiana koloru tła nawigacyjnej kropki slajdu podczas skupienia */
+}
+
+
+/* Styl dla responsywności na urządzeniach o szerokości ekranu do 768px */
+@media screen and (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu header */
+  }
+
+  .intro h1 {
+    font-size: 1.5rem;
+    /* Zmniejszenie rozmiaru czcionki dla nagłówka h1 w sekcji intro */
+  }
+
+  nav {
+    padding: 0.5rem;
+    /* Dodatkowy padding dla nawigacji na małych ekranach */
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu nawigacji */
+    background-color: #f5b349;
+    /* Zmiana koloru tła nawigacji na jasny pomarańczowy */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu ul w nawigacji */
+    align-items: center;
+    /* Wyśrodkowanie elementów nawigacji na małych ekranach */
+    text-align: center;
+    /* Wyśrodkowanie tekstu nawigacji na małych ekranach */
+  }
+
+  .navbar li {
+    margin: 5px 0;
+    /* Mniejsze marginesy dla elementów li w nawigacji na małych ekranach */
+  }
+  .recipe img, .recipe1 img, #dania img{
+    width: 200px;
+    height: 150px;
+  }
+  
+  #photos{
+    width: 100%;
+    /* Pełna szerokość dla obrazków w sekcji przepisów na małych ekranach */
+    height: auto;
+    /* Dostosowanie wysokości proporcjonalnie */
+  }
+
+  .box img{
+    width: 15%;
+    height: 15%;
+  }
+
+  .przepis, .przepis1 {
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu section na małych ekranach */
+  }
+
+  #order,
+  #dishes,
+  #message,
+  #button,
+  #myModal,
+  #mess {
+    padding: 0.5rem;
+    width: 100%;
+    /* Pełna szerokość dla małych ekranów */
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu ul w nawigacji */
+    align-items: center;
+    /* Wyśrodkowanie elementów nawigacji na małych ekranach */
+    text-align: center;
+  }
+
+  .przepis1 {
+    grid-template-columns: 1fr; /* Jeden przepis na całą szerokość ekranu */
+}
+}
+
+/* Styl dla formularza i propozycji */
+.formularz {
+  background-color: #fecb7f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  /* Szerokość formularza */
+  margin: auto;
+  /* Wyśrodkowanie formularza */
+  padding-right: 50px;
+  /* Dodatkowy padding po prawej stronie formularza */
+  margin-bottom: 90px;
+}
+
+.formularz h2 {
+  text-align: center;
+  /* Wyśrodkowany nagłówek formularza */
+  color: #000;
+}
+
+.formularz label {
+  font-weight: bold;
+  /* Pogrubienie etykiet formularza */
+  display: block;
+  /* Elementy w nowej linii */
+  margin-bottom: 5px;
+  /* Odstęp pod etykietą formularza */
+  color: #000;
+}
+
+#fname,
+#lname,
+#email,
+#own,
+#dish,
+#message {
+  width: 100%;
+  /* Pełna szerokość dla inputów w formularzu */
+  padding: 10px;
+  /* Odstępy wewnętrzne dla inputów formularza */
+  margin-bottom: 20px;
+  /* Odstęp pod inputami formularza */
+  border-radius: 5px;
+  /* Zaokrąglone narożniki inputów formularza */
+  border: 1px solid #ddd;
+}
+
+#mess {
+  padding: 10px;
+  /* Odstępy wewnętrzne dla dodatkowego pola w formularzu */
+  margin-bottom: 5px;
+  /* Odstęp pod dodatkowym polem w formularzu */
+  border-radius: 5px;
+  /* Zaokrąglone narożniki dodatkowego pola w formularzu */
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  /* Odstępy dla przycisku */
+  border: none;
+  border-radius: 5px;
+  /* Zaokrąglone narożniki przycisku */
+}
+
+#submit:hover {
+  background-color: #1f4521;
+  /* Ciemniejszy odcień zieleni przy najechaniu na przycisk */
+}
+
+#button {
+  padding: 50px;
+  /* Dodatkowy padding dla elementu o id "button" */
+}
+
+/* Styl dla elementu modal */
+.modal {
+  display: none;
+  /* Ukrycie modalu na początku */
+  position: fixed;
+  /* Ustalenie pozycji modalu,  element pozostanie zawsze w tym samym miejscu */
+  top: 0;
+  /* Odległość od góry strony */
+  left: 0;
+  /* Odległość od lewej strony */
+  width: 100%;
+  /* Pełna szerokość modalu */
+  height: 100%;
+  /* Pełna wysokość modalu */
+  justify-content: center;
+  /* Wyśrodkowanie zawartości modalu w pionie */
+  align-items: center;
+  /* Wyśrodkowanie zawartości modalu w poziomie */
+}
+
+/* Styl dla zawartości modalu */
+.modal-content {
+  background-color: #915151;
+  padding: 20px;
+  /* Odstępy wewnętrzne dla zawartości modalu */
+  border-radius: 10px;
+  /* Zaokrąglone narożniki zawartości modalu */
+}
+
+/* Styl dla przycisku zamykającego modal */
+.close {
+  position: absolute;
+  /* Ustalenie pozycji przycisku zamykającego modal */
+  top: 10px;
+  /* Odległość od góry modalu */
+  right: 10px;
+  /* Odległość od prawej strony modalu */
+  cursor: pointer;
+  /* Zmiana kursora na wskaźnik przy najechaniu */
+}
+
+
+
+/* podstrona przepisy */
+
+
+ /* Ustawienia ogólne dla strony */
+ .body {
+  font-family: 'Arial', sans-serif;
+  /* Wybór czcionki dla tekstu na stronie */
+  color: #666;
+  /* Kolor tekstu na biały */
+  margin: 0;
+  /* Usunięcie marginesów */
+  padding: 0;
+  /* Usunięcie wewnętrznych odstępów */
+  background-color: #f1c4c4;
+  /* Ustalenie koloru tła strony na odcień różu */
+  text-align: center;
+  /* Wyśrodkowanie tekstu */
+}
+
+
+/* Styl dla nagłówka pierwszego poziomu (h1) */
+.body h1 {
+  color: #666;
+  /* Pomarańczowy kolor dla nagłówka */
+  padding-bottom: 10px;
+  /* Odstęp pod nagłówkiem */
+}
+
+.body h2 {
+  text-align: left;
+}
+
+.header {
+  border-bottom: 2px solid #ff8c00;
+  /* Linia pod nagłówkiem */
+
+}
+
+.navbar1 {
+  background-color: #f8a451;
+  border-radius: 10px;
+  display: flex;
+  /* Ustawienie kontenera nawigacji jako flexbox */
+  flex-wrap: wrap;
+  /* Umożliwienie zawijania elementów nawigacyjnych do nowej linii */
+  justify-content: center;
+  /* Wyśrodkowanie elementów nawigacyjnych */
+  padding: 20px;
+  margin: 20px;
+  list-style: none;
+  /* Usunięcie domyślnego stylu punktów listy */
+}
+
+.navbar1>ul {
+  display: flex;
+  /* Ustawienie elementów listy nawigacyjnej jako flexbox */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /* Usunięcie domyślnego stylu punktów listy */
+}
+
+.navbar1 li {
+  margin: 5px;
+  /* Dodanie marginesu między elementami nawigacji */
+}
+
+.navbar1 a {
+  display: block;
+  /* Ustawienie linków nawigacyjnych jako bloki */
+  color: white;
+  padding: 14px 16px;
+  /* Dodanie wewnętrznych odstępów */
+  text-decoration: none;
+  /* Usunięcie podkreślenia linków */
+  border-radius: 10px;
+}
+
+.navbar1 .dropdown1:hover {
+  background-color: rgb(255, 179, 72);
+  /* Zmiana koloru tła podczas najechania na rozwijane menu */
+}
+
+.dropdown1 {
+  border-radius: 5px;
+  /* Zaokrąglenie narożników dla rozwijanego menu */
+  text-decoration: none;
+}
+
+.dropdown-content1 {
+  border-radius: 10px;
+  /* Zaokrąglenie narożników dla zawartości rozwijanego menu */
+  display: none;
+  /* Ukrycie zawartości rozwijanego menu */
+  position: absolute;
+  /* Ustawienie pozycji absolutnej */
+  background-color: white;
+  list-style: none;
+}
+
+.dropdown-content1 a {
+  color: black;
+  border-radius: 10px;
+  /* Zaokrąglenie narożników dla linków w rozwijanym menu */
+}
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+  /* Wyświetlenie zawartości rozwijanego menu podczas najechania na nie */
+}
+
+.logo_navbar1 img {
+  width: 100px;
+  /* Ustalenie szerokości loga */
+  height: 100px;
+  /* Ustalenie wysokości loga */
+}
+
+.nav {
+  display: flex;
+  /* Ustawienie nawigacji jako flexbox */
+  justify-content: center;
+  /* Wyśrodkowanie nawigacji */
+}
+
+.nav a:hover {
+  color: #ff8c00;
+  /* Zmiana koloru tekstu podczas najechania na link nawigacyjny */
+}
+
+.recipe11 {
+  border-bottom: 2px solid #ff8c00;
+  /* Linia pod nagłówkiem */
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.recipe11 label {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+
+/* Styl dla sekcji przepisu */
+#przepis1 {
+  max-width: 800px;
+  /* Maksymalna szerokość sekcji */
+  margin: 20px auto;
+  /* Wyśrodkowanie sekcji */
+  padding: 20px;
+  /* Wewnętrzne odstępy */
+  background-color: #fff;
+  /* Białe tło sekcji */
+  border-radius: 10px;
+  /* Zaokrąglenie narożników */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Delikatna cień */
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* Styl dla listy składników */
+
+#przepis1 ul li {
+
+  padding: 10px;
+  /* Usunięcie wewnętrznych odstępów po lewej stronie */
+  border-bottom: 1px solid #eee;
+  /* Wyjustowanie tekstu do lewej */
+  text-align: left;
+}
+
+.recipe22 {
+  text-align: left;
+  margin-bottom: 100px;
+}
+
+
+
+.ikony1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+
+.ikony1 img {
+  width: 50px;
+  height: auto;
+}
+
+/* Stopka */
+.footer {
+ padding: 10px;
+ /* Wewnętrzne odstępy */
+ background-color: #f8a451;
+ /* Jasne tło stopki */
+ color: #666;
+ /* Szary kolor tekstu */
+ position: fixed;
+ /* Ustawienie stopki na stałej pozycji */
+ bottom: 0;
+ /* Przyleganie do dolnej krawędzi ekranu */
+ width: 100%;
+ /* Szerokość stopki na 100% szerokości ekranu */
+ border-top: 1px solid #eee;
+ /* Linia górna stopki */
+}
+
+.footer img {
+ width: 30px;
+ height: 30px;
+ transition: transform 0.3s ease-in-out;
+ /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+ border-radius: 10px;
+}
+
+.footer img:hover {
+ transform: scale(1.2);
+ /* Powiększenie obrazu w stopce podczas najechania myszką */
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .header {
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu header */
+  }
+
+  .nav {
+    padding: 0.5rem;
+    /* Dodatkowy padding dla nawigacji na małych ekranach */
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu nawigacji */
+    background-color: #f5b349;
+    /* Zmiana koloru tła nawigacji na jasny pomarańczowy */
+  }
+
+  .navbar1 ul {
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu ul w nawigacji */
+    align-items: center;
+    /* Wyśrodkowanie elementów nawigacji na małych ekranach */
+    text-align: center;
+    /* Wyśrodkowanie tekstu nawigacji na małych ekranach */
+  }
+
+  .navbar1 li {
+    margin: 5px 0;
+    /* Mniejsze marginesy dla elementów li w nawigacji na małych ekranach */
+  }
+
+  #przepis1 {
+    flex-direction: column;
+    /* Zmiana kierunku układu na kolumnowy dla elementu section na małych ekranach */
+  }
+
+  #przepis1 img {
+    width: 100%;
+    /* Pełna szerokość dla obrazków w sekcji przepisów na małych ekranach */
+    height: auto;
+  }
+
+  #przepis1 .ikony1 img {
+    width: 10%;
+    height: 10%;
+  }
+}
+

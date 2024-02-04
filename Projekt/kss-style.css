@@ -1,0 +1,859 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* Wybór czcionki dla tekstu na stronie */
+    color: white;
+    /* Kolor tekstu na biały */
+    margin: 0;
+    /* Usunięcie marginesów */
+    padding: 0;
+    /* Usunięcie wewnętrznych odstępów */
+    background-color: #f1c4c4;
+    /* Ustalenie koloru tła strony na odcień różu */
+    text-align: center;
+    /* Wyśrodkowanie tekstu */
+  }
+  
+  /* Styl dla nagłówka pierwszego poziomu (h1) */
+  body h1 {
+    border-radius: 10px;
+    /* Zaokrąglenie narożników nagłówka */
+  }
+  
+  /* Styl dla paragrafów */
+  p {
+    font-size: 20px;
+    /* Ustalenie rozmiaru czcionki paragrafów na 50 pikseli */
+  }
+  
+  /* Styl dla nagłówka */
+  header {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    /* Dodanie wewnętrznych odstępów */
+    background-color: #f8a451;
+  }
+  
+  /* Styl dla sekcji "intro" */
+  .intro {
+    background-color: #ff8f1e;
+    text-align: center;
+    border-radius: 15px;
+    /* Zaokrąglenie narożników */
+    margin: 5px;
+    /* Dodanie marginesu */
+    padding: 5px;
+    /* Dodanie wewnętrznych odstępów */
+  }
+  
+  /* Nawigacja */
+  .navbar {
+    background-color: #ff8f1e;
+    border-radius: 10px;
+    display: flex;
+    /* Ustawienie kontenera nawigacji jako flexbox */
+    flex-wrap: wrap;
+    /* Umożliwienie zawijania elementów nawigacyjnych do nowej linii */
+    justify-content: center;
+    /* Wyśrodkowanie elementów nawigacyjnych */
+    padding: 20px;
+    margin: 20px;
+    list-style: none;
+    /* Usunięcie domyślnego stylu punktów listy */
+  }
+  
+  .navbar>ul {
+    display: flex;
+    /* Ustawienie elementów listy nawigacyjnej jako flexbox */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* Usunięcie domyślnego stylu punktów listy */
+  }
+  
+  .navbar li {
+    margin: 5px;
+    /* Dodanie marginesu między elementami nawigacji */
+  }
+  
+  .navbar a {
+    display: block;
+    /* Ustawienie linków nawigacyjnych jako bloki */
+    color: white;
+    padding: 14px 16px;
+    /* Dodanie wewnętrznych odstępów */
+    text-decoration: none;
+    /* Usunięcie podkreślenia linków */
+    border-radius: 10px;
+  }
+  
+  .navbar .dropdown:hover {
+    background-color: rgb(255, 179, 72);
+    /* Zmiana koloru tła podczas najechania na rozwijane menu */
+  }
+  
+  .dropdown {
+    border-radius: 5px;
+    /* Zaokrąglenie narożników dla rozwijanego menu */
+  }
+  
+  .dropdown-content {
+    border-radius: 10px;
+    /* Zaokrąglenie narożników dla zawartości rozwijanego menu */
+    display: none;
+    /* Ukrycie zawartości rozwijanego menu */
+    position: absolute;
+    /* Ustawienie pozycji absolutnej */
+    background-color: white;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    border-radius: 10px;
+    /* Zaokrąglenie narożników dla linków w rozwijanym menu */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    /* Wyświetlenie zawartości rozwijanego menu podczas najechania na nie */
+  }
+  
+  .logo_navbar img {
+    width: 100px;
+    /* Ustalenie szerokości loga */
+    height: 100px;
+    /* Ustalenie wysokości loga */
+  }
+  
+  nav {
+    display: flex;
+    /* Ustawienie nawigacji jako flexbox */
+    justify-content: center;
+    /* Wyśrodkowanie nawigacji */
+  }
+  
+  nav a:hover {
+    color: #ff8c00;
+    /* Zmiana koloru tekstu podczas najechania na link nawigacyjny */
+  }
+  
+  #dania {
+    display: flex;
+    /* Ustawienie sekcji jako flexbox */
+    flex-wrap: wrap;
+    /* Umożliwienie zawijania elementów sekcji do nowej linii */
+    justify-content: space-around;
+    /* Rozłożenie elementów z równymi odstępami od siebie */
+    max-width: auto;
+    /* Maksymalna szerokość sekcji */
+    margin: 20px auto;
+    /* Ustawienie marginesu na górze i dołu, a automatyczne po bokach */
+    padding: 30px;
+    margin-bottom: 80px;
+    /* Dodanie marginesu dolnego */
+    background-color: #fecb7f;
+    border-radius: 8px;
+  }
+  
+  
+  /*Sekcja Przepisy */
+  .recipe {
+    flex: calc(33.33%);
+    text-align: center;
+    padding: 10px;
+    /* Dodanie wewnętrznych odstępów dla przepisów */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+  }
+  
+  .recipe:hover {
+    transform: scale(1.05);
+    /* Powiększenie przepisu podczas najechania myszką */
+  }
+  
+  .recipe img,
+  img {
+    width: 450px;
+    height: 400px;
+    border-radius: 8px;
+    /* Zaokrąglenie narożników obrazu przepisu */
+    transition: transform 0.3s ease-in-out;
+    /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+  }
+  
+  .recipe:hover img {
+    transform: scale(1.1);
+    /* Powiększenie obrazu przepisu podczas najechania myszką */
+  }
+  
+  #przepis1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e8b7e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trzy kolumny */
+    grid-gap: 20px; /* Odstęp między elementami */
+  }
+  
+  /* Styl dla pojedynczego przepisu */
+  .recipe1 {
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .recipe1:hover{
+    transform: scale(1.05);
+  }
+  /* Styl dla nagłówka przepisu */
+  .recipe1 h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  /* Styl dla obrazka przepisu */
+  .recipe1 img {
+    width: 220px;
+    height: 170px;
+    border-radius: 5px;
+  }
+  
+  /* Styl dla składników */
+  .recipe1 .ingredients {
+    margin-top: 10px;
+  }
+  
+  label a {
+    text-decoration: none;
+    color: rgb(240, 87, 87);
+  }
+  
+  .name{
+    border-bottom: 1px solid black;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+  
+  /* Stopka */
+.stopka{
+    text-align: center;
+    padding: 10px;
+    background-color: #f8a451;
+    color: #fff;
+    position: fixed;
+    /* Ustawienie stopki na stałej pozycji */
+    bottom: 0;
+    /* Przyleganie do dolnej krawędzi ekranu */
+    width: 100%;
+    /* Szerokość stopki na 100% szerokości ekranu */
+    z-index: 2;/* nie przeswietla boxa*/
+  }
+  
+  .footer img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+    /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+  }
+  
+  .footer img:hover {
+    transform: scale(1.2);
+    /* Powiększenie obrazu w stopce podczas najechania myszką */
+  }
+  
+  /* Slider */
+  .slider {
+    width: 100%;
+    /* Ustalenie szerokości slidera na 100% szerokości ekranu */
+    text-align: center;
+    overflow: hidden;
+    /* Ukrycie elementów, które nie mieszczą się w obszarze slidera */
+  }
+  
+  .slides {
+    display: flex;
+    /* Ustawienie slajdów jako flexbox */
+    overflow-x: auto;
+    /* Umożliwienie płynnego przewijania po osi poziomej */
+    scroll-behavior: smooth;
+    /* Dodanie płynnego przewijania do slajdów */
+  }
+  
+  .slides::-webkit-scrollbar {
+    width: 0px;
+    /* Ukrycie paska przewijania */
+    height: 0px;
+    /* Ukrycie paska przewijania */
+  }
+  
+  .slides>div {
+    flex-shrink: 0;
+    /* Zablokowanie zwężania elementów slajdów */
+    width: 100%;
+    /* Ustalenie szerokości slajdu na 100% szerokości kontenera */
+    height: auto;
+    /* Automatyczne dostosowanie wysokości slajdu */
+    margin-right: 0.5rem;
+    /* Dodanie odstępu na prawo między slajdami */
+    border-radius: 10px;
+    /* Zaokrąglenie narożników slajdu */
+    background: #fecb7f;
+  }
+  
+  .slides img:hover {
+    transform: scale(1.1);
+  }
+  
+  .slider>a {
+    display: inline-flex;
+    /* Ustawienie nawigacji slajdów jako flexbox, dodatkowo pozwalając na ustawienie szerokości i wysokości */
+    width: 1.5rem;
+    /* Ustalenie szerokości nawigacyjnej kropki slajdu */
+    height: 1.5rem;
+    /* Ustalenie wysokości nawigacyjnej kropki slajdu */
+    background: white;
+    /* Ustalenie koloru tła nawigacyjnej kropki slajdu */
+    text-decoration: none;
+    /* Usunięcie podkreślenia linku */
+    border-radius: 50%;
+    /* Zaokrąglenie narożników nawigacyjnej kropki slajdu */
+  }
+  
+  .slider>a:focus {
+    background: #000;
+    /* Zmiana koloru tła nawigacyjnej kropki slajdu podczas skupienia */
+  }
+  
+  
+  /* Styl dla responsywności na urządzeniach o szerokości ekranu do 768px */
+  @media screen and (max-width: 600px) {
+  
+    header {
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu header */
+    }
+  
+    .intro h1 {
+      font-size: 1.5rem;
+      /* Zmniejszenie rozmiaru czcionki dla nagłówka h1 w sekcji intro */
+    }
+  
+    nav {
+      padding: 0.5rem;
+      /* Dodatkowy padding dla nawigacji na małych ekranach */
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu nawigacji */
+      background-color: #f5b349;
+      /* Zmiana koloru tła nawigacji na jasny pomarańczowy */
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu ul w nawigacji */
+      align-items: center;
+      /* Wyśrodkowanie elementów nawigacji na małych ekranach */
+      text-align: center;
+      /* Wyśrodkowanie tekstu nawigacji na małych ekranach */
+    }
+  
+    .navbar li {
+      margin: 5px 0;
+      /* Mniejsze marginesy dla elementów li w nawigacji na małych ekranach */
+    }
+    .recipe img, .recipe1 img, #dania img{
+      width: 200px;
+      height: 150px;
+    }
+    
+    #photos{
+      width: 100%;
+      /* Pełna szerokość dla obrazków w sekcji przepisów na małych ekranach */
+      height: auto;
+      /* Dostosowanie wysokości proporcjonalnie */
+    }
+  
+    #przepis, #przepis1 {
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu section na małych ekranach */
+    }
+  
+    #order,
+    #dishes,
+    #message,
+    #button,
+    #myModal,
+    #mess {
+      padding: 0.5rem;
+      width: 100%;
+      /* Pełna szerokość dla małych ekranów */
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu ul w nawigacji */
+      align-items: center;
+      /* Wyśrodkowanie elementów nawigacji na małych ekranach */
+      text-align: center;
+    }
+  
+    #przepis1 {
+      grid-template-columns: 1fr; /* Jeden przepis na całą szerokość ekranu */
+  }
+  }
+  
+  /* Styl dla formularza i propozycji */
+  .formularz {
+    background-color: #fecb7f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    /* Szerokość formularza */
+    margin: auto;
+    /* Wyśrodkowanie formularza */
+    padding-right: 50px;
+    /* Dodatkowy padding po prawej stronie formularza */
+    margin-bottom: 90px;
+  }
+  
+  .formularz h2 {
+    text-align: center;
+    /* Wyśrodkowany nagłówek formularza */
+    color: #000;
+  }
+  
+  .formularz label {
+    font-weight: bold;
+    /* Pogrubienie etykiet formularza */
+    display: block;
+    /* Elementy w nowej linii */
+    margin-bottom: 5px;
+    /* Odstęp pod etykietą formularza */
+    color: #000;
+  }
+  
+  #fname,
+  #lname,
+  #email,
+  #own,
+  #dish,
+  #message {
+    width: 100%;
+    /* Pełna szerokość dla inputów w formularzu */
+    padding: 10px;
+    /* Odstępy wewnętrzne dla inputów formularza */
+    margin-bottom: 20px;
+    /* Odstęp pod inputami formularza */
+    border-radius: 5px;
+    /* Zaokrąglone narożniki inputów formularza */
+    border: 1px solid #ddd;
+  }
+  
+  #mess {
+    padding: 10px;
+    /* Odstępy wewnętrzne dla dodatkowego pola w formularzu */
+    margin-bottom: 5px;
+    /* Odstęp pod dodatkowym polem w formularzu */
+    border-radius: 5px;
+    /* Zaokrąglone narożniki dodatkowego pola w formularzu */
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    /* Odstępy dla przycisku */
+    border: none;
+    border-radius: 5px;
+    /* Zaokrąglone narożniki przycisku */
+  }
+  
+  #submit:hover {
+    background-color: #1f4521;
+    /* Ciemniejszy odcień zieleni przy najechaniu na przycisk */
+  }
+  
+  #button {
+    padding: 50px;
+    /* Dodatkowy padding dla elementu o id "button" */
+  }
+  
+  /* Styl dla elementu modal */
+  .modal {
+    display: none;
+    /* Ukrycie modalu na początku */
+    position: fixed;
+    /* Ustalenie pozycji modalu,  element pozostanie zawsze w tym samym miejscu */
+    top: 0;
+    /* Odległość od góry strony */
+    left: 0;
+    /* Odległość od lewej strony */
+    width: 100%;
+    /* Pełna szerokość modalu */
+    height: 100%;
+    /* Pełna wysokość modalu */
+    justify-content: center;
+    /* Wyśrodkowanie zawartości modalu w pionie */
+    align-items: center;
+    /* Wyśrodkowanie zawartości modalu w poziomie */
+  }
+  
+  /* Styl dla zawartości modalu */
+  .modal-content {
+    background-color: #915151;
+    padding: 20px;
+    /* Odstępy wewnętrzne dla zawartości modalu */
+    border-radius: 10px;
+    /* Zaokrąglone narożniki zawartości modalu */
+  }
+  
+  /* Styl dla przycisku zamykającego modal */
+  .close {
+    position: absolute;
+    /* Ustalenie pozycji przycisku zamykającego modal */
+    top: 10px;
+    /* Odległość od góry modalu */
+    right: 10px;
+    /* Odległość od prawej strony modalu */
+    cursor: pointer;
+    /* Zmiana kursora na wskaźnik przy najechaniu */
+  }
+  
+  
+  
+  #photos {
+    /* display: flex; */
+    justify-content: center;
+  
+  
+  }
+  
+  .gallery {
+    margin-left: 50px;
+    margin-right: 50px;
+    columns: 4;
+    padding: 20px;
+    margin-bottom: 100px;
+    margin-top: auto;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 4px;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+    border-radius: 5px;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .box {
+    position: absolute;
+    z-index: 2;
+    right: 255px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .box img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .ingredients ul li {
+    list-style: none;
+    text-align: center;
+    margin-right: 50px;
+  }
+
+  /* podstrona przepisy */
+   /* Ustawienia ogólne dla strony */
+ .body {
+    font-family: 'Arial', sans-serif;
+    /* Wybór czcionki dla tekstu na stronie */
+    color: #666;
+    /* Kolor tekstu na biały */
+    margin: 0;
+    /* Usunięcie marginesów */
+    padding: 0;
+    /* Usunięcie wewnętrznych odstępów */
+    background-color: #f1c4c4;
+    /* Ustalenie koloru tła strony na odcień różu */
+    text-align: center;
+    /* Wyśrodkowanie tekstu */
+  }
+ 
+ 
+  /* Styl dla nagłówka pierwszego poziomu (h1) */
+  .body h1 {
+    color: #666;
+    /* Pomarańczowy kolor dla nagłówka */
+    padding-bottom: 10px;
+    /* Odstęp pod nagłówkiem */
+  }
+ 
+  .body h2 {
+    text-align: left;
+  }
+ 
+  .header {
+    border-bottom: 2px solid #ff8c00;
+    /* Linia pod nagłówkiem */
+ 
+  }
+ 
+  .navbar1 {
+    background-color: #f8a451;
+    border-radius: 10px;
+    display: flex;
+    /* Ustawienie kontenera nawigacji jako flexbox */
+    flex-wrap: wrap;
+    /* Umożliwienie zawijania elementów nawigacyjnych do nowej linii */
+    justify-content: center;
+    /* Wyśrodkowanie elementów nawigacyjnych */
+    padding: 20px;
+    margin: 20px;
+    list-style: none;
+    /* Usunięcie domyślnego stylu punktów listy */
+  }
+ 
+  .navbar1>ul {
+    display: flex;
+    /* Ustawienie elementów listy nawigacyjnej jako flexbox */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* Usunięcie domyślnego stylu punktów listy */
+  }
+ 
+  .navbar1 li {
+    margin: 5px;
+    /* Dodanie marginesu między elementami nawigacji */
+  }
+ 
+  .navbar1 a {
+    display: block;
+    /* Ustawienie linków nawigacyjnych jako bloki */
+    color: white;
+    padding: 14px 16px;
+    /* Dodanie wewnętrznych odstępów */
+    text-decoration: none;
+    /* Usunięcie podkreślenia linków */
+    border-radius: 10px;
+  }
+ 
+  .navbar1 .dropdown1:hover {
+    background-color: rgb(255, 179, 72);
+    /* Zmiana koloru tła podczas najechania na rozwijane menu */
+  }
+ 
+  .dropdown1 {
+    border-radius: 5px;
+    /* Zaokrąglenie narożników dla rozwijanego menu */
+    text-decoration: none;
+  }
+ 
+  .dropdown-content1 {
+    border-radius: 10px;
+    /* Zaokrąglenie narożników dla zawartości rozwijanego menu */
+    display: none;
+    /* Ukrycie zawartości rozwijanego menu */
+    position: absolute;
+    /* Ustawienie pozycji absolutnej */
+    background-color: white;
+    list-style: none;
+  }
+ 
+  .dropdown-content1 a {
+    color: black;
+    border-radius: 10px;
+    /* Zaokrąglenie narożników dla linków w rozwijanym menu */
+  }
+ 
+  .dropdown1:hover .dropdown-content1 {
+    display: block;
+    /* Wyświetlenie zawartości rozwijanego menu podczas najechania na nie */
+  }
+ 
+  .logo_navbar1 img {
+    width: 100px;
+    /* Ustalenie szerokości loga */
+    height: 100px;
+    /* Ustalenie wysokości loga */
+  }
+ 
+  .nav {
+    display: flex;
+    /* Ustawienie nawigacji jako flexbox */
+    justify-content: center;
+    /* Wyśrodkowanie nawigacji */
+  }
+ 
+  .nav a:hover {
+    color: #ff8c00;
+    /* Zmiana koloru tekstu podczas najechania na link nawigacyjny */
+  }
+ 
+  .recipe11 {
+    border-bottom: 2px solid #ff8c00;
+    /* Linia pod nagłówkiem */
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+ 
+  .recipe11 label {
+    font-size: 40px;
+    font-weight: 400;
+  }
+ 
+ 
+  /* Styl dla sekcji przepisu */
+  #przepis1 {
+    max-width: 800px;
+    /* Maksymalna szerokość sekcji */
+    margin: 20px auto;
+    /* Wyśrodkowanie sekcji */
+    padding: 20px;
+    /* Wewnętrzne odstępy */
+    background-color: #fff;
+    /* Białe tło sekcji */
+    border-radius: 10px;
+    /* Zaokrąglenie narożników */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Delikatna cień */
+    text-align: center;
+    margin-bottom: 100px;
+  }
+ 
+  /* Styl dla listy składników */
+ 
+  #przepis1 ul li {
+ 
+    padding: 10px;
+    /* Usunięcie wewnętrznych odstępów po lewej stronie */
+    border-bottom: 1px solid #eee;
+    /* Wyjustowanie tekstu do lewej */
+    text-align: left;
+  }
+ 
+  .recipe22 {
+    text-align: left;
+    margin-bottom: 100px;
+  }
+ 
+  
+ 
+  .ikony1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+ 
+  img {
+    width: 500px;
+    height: auto;
+  }
+ 
+  .ikony1 img {
+    width: 50px;
+    height: auto;
+  }
+ 
+  /* Stopka */
+  .footer {
+   padding: 10px;
+   /* Wewnętrzne odstępy */
+   background-color: #f8a451;
+   /* Jasne tło stopki */
+   color: #666;
+   /* Szary kolor tekstu */
+   position: fixed;
+   /* Ustawienie stopki na stałej pozycji */
+   bottom: 0;
+   /* Przyleganie do dolnej krawędzi ekranu */
+   width: 100%;
+   /* Szerokość stopki na 100% szerokości ekranu */
+   border-top: 1px solid #eee;
+   /* Linia górna stopki */
+ }
+ 
+ .footer img {
+   width: 30px;
+   height: 30px;
+   transition: transform 0.3s ease-in-out;
+   /* Dodanie płynnego efektu transformacji przy najechaniu myszką */
+   border-radius: 10px;
+ }
+ 
+ .footer img:hover {
+   transform: scale(1.2);
+   /* Powiększenie obrazu w stopce podczas najechania myszką */
+ }
+ 
+ 
+ 
+ 
+  @media screen and (max-width: 600px) {
+ 
+    .header {
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu header */
+    }
+ 
+    .nav {
+      padding: 0.5rem;
+      /* Dodatkowy padding dla nawigacji na małych ekranach */
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu nawigacji */
+      background-color: #f5b349;
+      /* Zmiana koloru tła nawigacji na jasny pomarańczowy */
+    }
+ 
+    .navbar1 ul {
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu ul w nawigacji */
+      align-items: center;
+      /* Wyśrodkowanie elementów nawigacji na małych ekranach */
+      text-align: center;
+      /* Wyśrodkowanie tekstu nawigacji na małych ekranach */
+    }
+ 
+    .navbar1 li {
+      margin: 5px 0;
+      /* Mniejsze marginesy dla elementów li w nawigacji na małych ekranach */
+    }
+ 
+    #przepis1 {
+      flex-direction: column;
+      /* Zmiana kierunku układu na kolumnowy dla elementu section na małych ekranach */
+    }
+ 
+    #przepis1 img {
+      width: 100%;
+      /* Pełna szerokość dla obrazków w sekcji przepisów na małych ekranach */
+      height: auto;
+    }
+ 
+    #przepis1 .ikony1 img {
+      width: 10%;
+      height: 10%;
+    }
+  }
+ 
+ 
+  
